@@ -6,7 +6,7 @@
  * main -prints the minimum number of coins
  * to make change for an amount of money.
  * @argv: argument vector
- * @argc: argument count 
+ * @argc: argument count
  * Return: -1 if the arguments is not exactly one
  * otherwise 0.
  */
