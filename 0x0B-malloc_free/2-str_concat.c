@@ -4,7 +4,7 @@
  * str_concat - concatenates two strings.
  * @s1: first string to be concatenated
  * @s2: second string to be concatenated
- * Return: concatenate of s1 and s2 
+ * Return: concatenate of s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
