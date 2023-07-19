@@ -1,36 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - print own opcodes
- * @argc: argument count
- * @argv: argument vector
- * Return: Always 0
+ * main - check the code for Holberton School students.
+ * @argc: argument count.
+ * @argv: argument vector.
+ *
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	int bytes, n;
-	char *array;
+	char *opc = (char *) main;
+	int i, nbytes;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	bytes = atoi(argv[1]);
-	if (bytes < 0)
+
+	nbytes = atoi(argv[1]);
+
+	if (nbytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	array = (char *)main;
-	for (n = 0; n < bytes; n++)
+
+	for (i = 0; i < nbytes; i++)
 	{
-		if (n == bytes - 1)
-		{
-			printf("%02hhx\n", array[n]);
-			break;
-		}
-		printf("%02hhx", array[n]);
+		printf("%02x", opc[i] & 0xFF);
+		if (i != nbytes - 1)
+			printf(" ");
 	}
+
+	printf("\n");
 	return (0);
 }
