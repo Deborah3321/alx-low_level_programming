@@ -12,30 +12,30 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *local, *sex = *head;
+	listint_t *local, *friend = *head;
 	unsigned int partner;
 
-	if (sex == NULL)
+	if (friend == NULL)
 		return (-1);
 
 	if (index == 0)
 	{
 		*head = (*head)->next;
-		free(sex);
+		free(friend);
 		return (1);
 	}
 
 	while (partner)
 	{
-		if (!sex || !(sex->next))
+		if (!friend || !(friend->next))
 			return (-1);
 
-		sex = sex->next;
+		friend = friend->next;
 		partner++;
 	}
 
-	local = sex->next;
-	sex->next = local->next;
+	local = friend->next;
+	friend->next = local->next;
 	free(local);
 	return (1);
 }
