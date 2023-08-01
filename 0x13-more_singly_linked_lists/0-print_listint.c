@@ -9,15 +9,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t s = 0;
-	const listint_t *phogole = h;
+	const listint_t *cursor = h;
+	size_t count = 0;
 
-	while (phogole != NULL)
+	while (cursor != NULL)
 	{
-		s += 1;
-		printf("%d\n", phogole->n);
-		phogole = phogole->next;
+		printf("%d\n", cursor->n);
+		count += 1;
+		cursor = cursor->next;
 	}
-
-	return (s);
+	return (count);
 }
