@@ -10,12 +10,13 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t s = 0;
+	const listint_t *phogole = h;
 
-	while (h)
+	while (phogole != NULL)
 	{
-		s++;
-		printf("%d\n", h->n);
-		h = h->next;
+		s += 1;
+		printf("%d\n", phogole->n);
+		phogole = phogole->next;
 	}
 
 	return (s);
