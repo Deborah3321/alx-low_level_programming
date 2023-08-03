@@ -6,13 +6,13 @@
  * @index: index of the bit.
  * Return: 1 if it worked, -1 if it didn't.
  */
-int set_bit (unsigned long int *n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int a;
+	if (index < sizeof(n) * 8)
+	{
+		*n = *n | (1 << index);
+		return (1);
+	}
 
-	if (index > 63)
-		return (-1);
-	a = 1 << index;
-	*n = (*n | a);
-	return (1);
+	return (-1);
 }
