@@ -96,7 +96,7 @@ int strNumbers(char *str)
 
 void multiply(char *n1, char *n2)
 {
-	int idx, n1n, n2n, res, tmp, total;
+	int indx, n1n, n2n, res, tmp, total;
 	int n1l = _strlen(n1);
 	int n2l = _strlen(n2);
 
@@ -123,13 +123,13 @@ void multiply(char *n1, char *n2)
 		}
 	}
 	res = 0;
-	for (idx = 0; idx < total; idx++)
+	for (indx = 0; indx < total; indx++)
 	{
-		if (ptr[idx] == 0 && res == 1)
-			_putchar(ptr[idx] + '0');
-		else if (ptr[idx] > 0)
+		if (ptr[indx] == 0 && res == 1)
+			_putchar(ptr[indx] + '0');
+		else if (ptr[indx] > 0)
 		{
-			_putchar(ptr[idx] + '0');
+			_putchar(ptr[indx] + '0');
 			res = 1;
 		}
 	}
